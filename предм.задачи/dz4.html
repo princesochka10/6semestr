@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dz4</title>
+</head>
+<body>
+   <script>
+
+let last_name = prompt('Введите фамилию', '');
+let first_name  = prompt('Введите имя', '');
+let middle_name  = prompt('Введите отчество', '');
+
+function gender(last_name, first_name, middle_name){
+            let end_index = middle_name.length - 1; 
+            let pre_end_index = end_index - 1; 
+            let last_symbol = (middle_name[pre_end_index] + middle_name[end_index]).toUpperCase();  
+            let gender; 
+
+            if (last_symbol == 'ИЧ') {
+                gender = 'м' ; 
+            } else if (last_symbol == 'ЛЫ') {
+                gender = 'м';
+            } else if (last_symbol == 'НА') {
+                gender = 'ж'; 
+            } else if (last_symbol == 'ЗЫ') {
+                gender = 'ж' ; 
+            }        
+         return gender;     
+        }
+let g = gender(last_name, first_name, middle_name);
+      
+var v1 = confirm('У вас BMW?');
+    if (v1==true) {
+        console.log('ФИО: ' + last_name + ' ' +  first_name + ' ' +  middle_name + ';  ' + 'ваш пол: ' + g + ';  ' + 'марка авто: ' + 'BMW');
+    } else if (v1==false) 
+       var v2 = confirm('У вас nissan?');
+       if (v2==true) {
+        console.log('ФИО: ' + last_name + ' ' +  first_name + ' ' +  middle_name + ';  ' + 'ваш пол: ' + g + ';  ' + 'марка авто: ' + 'NISSAN');
+        } else if (v2==false) {
+       let v3 = prompt('Введите марку вашего автомобиля');
+       let v = v3;
+       console.log('ФИО: ' + last_name + ' ' +  first_name + ' ' +  middle_name + ';  ' + 'ваш пол: ' + g + ';  ' + 'марка авто: ' + v);
+    }
+;
+
+</script>
+</body>
+</html>
