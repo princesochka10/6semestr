@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dz5</title>
+</head>
+<body>
+   <script>
+   
+        let user = {
+            name: 'Maria',
+            last_name: 'Zolotareva',
+            age: 30,
+            cat: {
+                name: 'Yappi',
+                age: 3,
+            },
+            'country-birthday': 'rus',
+            get full_name() {
+                return `${this.last_name} ${this.name}`;
+            },
+          };
+          let salaries = [
+                {
+                  salary: '15670',
+                 // from_date: '2009'
+                },
+                {
+                  salary: '16700',
+                  //from_date: '2012'
+                },
+                {
+                  salary: '19234',
+                 // from_date: '2018'
+                },
+            
+                ];
+           
+           let s = salaries.map(function(sal) {
+               return sal.salary;
+           });
+          
+           let min = Math.min(...s);
+           let max = Math.max(...s);
+
+
+      
+            
+           console.log(s, 'min: ', min, 'max: ', max);
+        
+        
+
+</script>
+</body>
+</html>
